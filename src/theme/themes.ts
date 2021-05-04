@@ -14,7 +14,6 @@ export interface IThemeSchema extends DefaultTheme {
 
   input: {
     backgroundColor: string;
-    color: string;
     hover: {
       backgroundColor: string;
       boxShadow: string;
@@ -33,37 +32,36 @@ export interface ITheme {
 }
 
 const successPalette: IPalette = {
-  primary: "#31b75e",
-  secondary: "#e9ffef",
+  primary: "#31b75e !important",
+  secondary: "#e9ffef !important",
 };
 
 const errorPalette: IPalette = {
-  primary: "#eb566a",
-  secondary: "#ffedf1",
+  primary: "#eb566a !important",
+  secondary: "#ffedf1 !important",
 };
 
 export const themes: ITheme = {
   easyPeasy: {
     colors: {
       process: {
-        primary: "#7327d5",
-        secondary: "#e8dcf7",
+        primary: "#7327d5 !important",
+        secondary: "#e8dcf7 !important",
       },
       success: successPalette,
       error: errorPalette,
     },
     input: {
-      backgroundColor: "#f3f3f4",
-      color: "#4e5159 !important",
+      backgroundColor: "#f3f3f4 !important",
       hover: {
         backgroundColor: "#fff !important",
-        boxShadow: "0 0 0 4px rgba(116, 40, 213, 0.1)",
+        boxShadow: "0 0 0 4px rgba(116, 40, 213, 0.1) !important",
       },
 
       focus: {
         borderColor: "rgb(116, 40, 213)",
-        boxShadow: "0 0 0 4px rgba(116, 40, 213, 0.1)",
-        backgroundColor: "#fff",
+        boxShadow: "0 0 0 4px rgba(116, 40, 213, 0.1) !important",
+        backgroundColor: "#fff !important",
       },
     },
   },
