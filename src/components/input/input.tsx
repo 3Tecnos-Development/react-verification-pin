@@ -1,6 +1,9 @@
-import React, { forwardRef } from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/indent */
+import React, { forwardRef, useState } from "react";
+import { IVerificationCode } from "src/types";
 // import { isMobile } from "react-device-detect";
-import * as S from "./styles/input";
+import * as S from "./styles/styled-input";
 
 type internalInputType = "text" | "number";
 
@@ -8,14 +11,22 @@ export interface IInputProps {
   id: string;
   type?: internalInputType;
   width?: string;
+  pattern?: RegExp;
   onFocus?: (e: React.FocusEvent<HTMLInputElement>) => void;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
   onBlur?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const Input = forwardRef<HTMLInputElement, IInputProps>(
-  ({ type, id, width, onFocus, onChange, onKeyDown, onBlur }, ref) => {
+export const Input = forwardRef<
+  HTMLInputElement,
+  IInputProps & IVerificationCode
+>(
+  (
+    { type, id, width, status, pattern, onFocus, onChange, onKeyDown, onBlur },
+    ref,
+  ) => {
+    const [value, setValue] = useState("");
     const handleOnFocus = (e: React.FocusEvent<HTMLInputElement>) => {
       if (onFocus) {
         onFocus(e);
@@ -24,13 +35,25 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
 
     const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
       if (onChange) {
-        onChange(event);
+        const inputValue = (event.target as any).value;
+        if (pattern) {
+          const regex = new RegExp(pattern);
+          if (regex.test(inputValue) || inputValue.length === 0) {
+            setValue(inputValue);
+            onChange(event);
+          }
+        } else {
+          setValue(inputValue);
+          onChange(event);
+        }
       }
     };
 
     return (
-      <S.Input
+      <S.StyledInput
         ref={ref}
+        value={value}
+        status={status}
         autoComplete="off"
         type={type}
         name={id}
