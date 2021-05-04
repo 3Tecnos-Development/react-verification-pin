@@ -3,9 +3,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import * as S from "./styles";
-import { Input, VerifyIcon } from "./components";
+import { Input, ShakeX, VerifyIcon } from "./components";
 import { useTheme } from "./theme";
-import { IStatus, StatusType } from "./types";
+import { IVerificationCode, StatusType } from "./types";
 
 export { StatusType };
 
@@ -17,7 +17,13 @@ const KEY_CODE = {
 
 type inputType = "number" | "text" | "numberAndText";
 
-interface IVerificationCodeProps extends IStatus {
+const pattern = {
+  number: /^[0-9]+$/,
+  text: /^[a-zA-Z]+$/,
+  numberAndText: /^[A-Za-z0-9]+$/,
+};
+
+interface IVerificationCodeProps extends IVerificationCode {
   type: inputType;
   inputsNumber: number;
   title?: string;
@@ -27,6 +33,7 @@ interface IVerificationCodeProps extends IStatus {
 }
 
 export const VerificationCode: React.FC<IVerificationCodeProps> = ({
+  type,
   inputsNumber,
   title,
   subTitle,
@@ -108,18 +115,22 @@ export const VerificationCode: React.FC<IVerificationCodeProps> = ({
         {subTitle && <S.SubTitle>{subTitle}</S.SubTitle>}
 
         <S.Middle>
-          {Array.from({ length: inputsNumber }, (_, k) => k).map((n) => {
-            return (
-              <Input
-                id={`inputVC-${n}`}
-                ref={(el) => {
-                  inputsRef.current[n] = el!;
-                }}
-                onChange={handleInputChange}
-                onKeyDown={handleInputKeyDown}
-              />
-            );
-          })}
+          <ShakeX shake={status === "error"}>
+            {Array.from({ length: inputsNumber }, (_, k) => k).map((n) => {
+              return (
+                <Input
+                  status={internalStatus}
+                  id={`inputVC-${n}`}
+                  ref={(el) => {
+                    inputsRef.current[n] = el!;
+                  }}
+                  pattern={pattern[type]}
+                  onChange={handleInputChange}
+                  onKeyDown={handleInputKeyDown}
+                />
+              );
+            })}
+          </ShakeX>
         </S.Middle>
       </S.Container>
     </ThemeProvider>
