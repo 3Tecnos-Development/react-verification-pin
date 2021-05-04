@@ -1,1 +1,1 @@
-export * from "./i-status";
+export * from "./i-verification-code";

@@ -1,5 +1,5 @@
 export type StatusType = "process" | "wait" | "error" | "success";
 
-export interface IStatus {
+export interface IVerificationCode {
   status: StatusType;
 }

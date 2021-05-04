@@ -1,8 +1,14 @@
 /* eslint-disable no-nested-ternary */
-import styled from "styled-components";
-import { IStatus } from "../../../types";
+import styled, { keyframes } from "styled-components";
+import { IVerificationCode } from "../../../types";
 
-export const Wrapped = styled.div<IStatus>`
+const pulse = keyframes`
+    0%{transform:scaleX(1)}
+    50%{transform:scale3d(1.20,1.20,1.20)}
+    to{transform:scaleX(1)}
+`;
+
+export const Wrapped = styled.div<IVerificationCode>`
   background-color: ${({ theme, status }) => theme.colors[status].secondary};
   position: relative;
   top: 50%;
@@ -19,5 +25,8 @@ export const Wrapped = styled.div<IStatus>`
     margin: auto;
     font-size: 40px;
     margin-top: 20px;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: ${({ status }) => (status === "error" ? pulse : "")};
   }
 `;
