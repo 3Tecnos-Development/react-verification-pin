@@ -1,4 +1,5 @@
-![react-verification-code](https://user-images.githubusercontent.com/51383115/117189810-fe791a00-adb4-11eb-9709-6e6610a3544b.gif)
+![react-verification-code](https://user-images.githubusercontent.com/51383115/117190814-40ef2680-adb6-11eb-9b38-3a67337cf734.gif)
+
 
 <h3 align="center">react-verification-code</h3>
 
