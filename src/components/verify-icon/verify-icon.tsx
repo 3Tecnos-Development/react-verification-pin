@@ -1,10 +1,10 @@
 /* eslint-disable no-nested-ternary */
 import React from "react";
 import { BiLock, BiLockOpen } from "react-icons/bi";
-import { IVerificationCode } from "../../types";
+import { IVerificationPin } from "../../types";
 import * as S from "./styles";
 
-export const VerifyIcon: React.FC<IVerificationCode> = ({ status }) => {
+export const VerifyIcon: React.FC<IVerificationPin> = ({ status }) => {
   return (
     <>
       <S.Spinner status={status} />

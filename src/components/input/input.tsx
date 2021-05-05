@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/indent */
 import React, { forwardRef, useState } from "react";
-import { IVerificationCode } from "src/types";
+import { IVerificationPin } from "src/types";
 import { v4 as uuidv4 } from "uuid";
 // import { isMobile } from "react-device-detect";
 import * as S from "./styles/styled-input";
@@ -22,7 +22,7 @@ export interface IInputProps {
 
 export const Input = forwardRef<
   HTMLInputElement,
-  IInputProps & IVerificationCode
+  IInputProps & IVerificationPin
 >(
   (
     { type, id, width, status, pattern, onFocus, onChange, onKeyDown, onBlur },

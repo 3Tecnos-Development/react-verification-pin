@@ -1,7 +1,7 @@
 {
-  "name": "react-verification-code",
-  "version": "1.0.0",
-  "description": "",
+  "name": "react-verification-pin",
+  "version": "0.1.0",
+  "description": "A library to verify the PIN code",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -13,14 +13,26 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/3Tecnos-Development/react-verification-code.git"
+    "url": "git+https://github.com/3Tecnos-Development/react-verification-pin.git"
   },
-  "author": "Lindsay Cerqueira<lindsay@3tecnos.com.br>",
+  "author": "Lindsay Cerqueira <lindsay@3tecnos.com.br>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/3Tecnos-Development/react-verification-code/issues"
+    "url": "https://github.com/3Tecnos-Development/react-verification-pin/issues"
   },
-  "homepage": "https://github.com/3Tecnos-Development/react-verification-code#readme",
+  "keywords": [
+    "react",
+    "react-component",
+    "credit card",
+    "input",
+    "verifycode",
+    "PIN",
+    "pin-code",
+    "SMS",
+    "SMS pin code",
+    "E-mail pin code"
+  ],
+  "homepage": "https://github.com/3Tecnos-Development/react-verification-pin#readme",
   "devDependencies": {
     "@types/faker": "^5.1.5",
     "@types/jest": "^26.0.5",
@@ -46,12 +58,12 @@
     "ts-node": "^8.10.2",
     "ttypescript": "^1.5.12",
     "typescript": "^3.9.7",
-    "typescript-transform-paths": "^2.2.3"
-  },
-  "dependencies": {
+    "typescript-transform-paths": "^2.2.3",
     "react": "^17.0.2",
     "react-icons": "^4.2.0",
-    "styled-components": "^5.2.3",
+    "styled-components": "^5.2.3"
+  },
+  "dependencies": {
     "uuid": "^8.3.2"
   }
 }

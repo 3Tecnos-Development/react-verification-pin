@@ -2,7 +2,7 @@
 
 import styled, { keyframes } from "styled-components";
 import { Wrapped } from "./wrapped";
-import { IVerificationCode } from "../../../types";
+import { IVerificationPin } from "../../../types";
 
 const animation = keyframes`
     0%{
@@ -14,7 +14,7 @@ const animation = keyframes`
     }
 `;
 
-export const SonarWave = styled(Wrapped)<IVerificationCode>`
+export const SonarWave = styled(Wrapped)<IVerificationPin>`
   background-color: ${({ theme, status }) => theme.colors[status].secondary};
   display: ${({ status }) =>
     status === "error" || status === "success" ? "block" : "none"};
