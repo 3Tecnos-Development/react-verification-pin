@@ -30,7 +30,8 @@ interface IVerificationCodeProps extends IVerificationCode {
   title?: string;
   subTitle: string;
   autoFocus?: boolean;
-  onFinish?: (code: string) => void;
+  onChange?: (letterOrNumber: string) => void;
+  onFinish?: (completeCode: string) => void;
 }
 
 export const VerificationCode: React.FC<IVerificationCodeProps> = ({
@@ -41,6 +42,7 @@ export const VerificationCode: React.FC<IVerificationCodeProps> = ({
   subTitle,
   autoFocus = true,
   status,
+  onChange,
   onFinish,
 }) => {
   const inputsRef = useRef<HTMLInputElement[]>([]);
@@ -72,7 +74,7 @@ export const VerificationCode: React.FC<IVerificationCodeProps> = ({
     }
   };
 
-  const getCode = () => {
+  const getCompleteCode = () => {
     const values: string[] = [];
     inputsRef.current.forEach(({ value }: any) => {
       values.push(value);
@@ -87,8 +89,12 @@ export const VerificationCode: React.FC<IVerificationCodeProps> = ({
 
     setInternalStatus("process");
 
+    if (onChange) {
+      onChange(value);
+    }
+
     if (value.length > 0) {
-      const code = getCode();
+      const code = getCompleteCode();
       if (onFinish && code.length === inputsNumber) {
         onFinish(code);
       } else {
