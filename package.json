@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/3Tecnos-Development/nosql-easy.git"
+    "url": "git+https://github.com/3Tecnos-Development/react-verification-code.git"
   },
-  "author": "Lindsay Cerqueira",
+  "author": "Lindsay Cerqueira<lindsay@3tecnos.com.br>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/3Tecnos-Development/nosql-easy/issues"
+    "url": "https://github.com/3Tecnos-Development/react-verification-code/issues"
   },
-  "homepage": "https://github.com/3Tecnos-Development/nosql-easy#readme",
+  "homepage": "https://github.com/3Tecnos-Development/react-verification-code#readme",
   "devDependencies": {
     "@types/faker": "^5.1.5",
     "@types/jest": "^26.0.5",
