@@ -1,6 +1,5 @@
 ![react-verification-code](https://user-images.githubusercontent.com/51383115/117190814-40ef2680-adb6-11eb-9b38-3a67337cf734.gif)
 
-
 <h3 align="center">react-verification-code</h3>
 
 ## Installation
@@ -52,12 +51,12 @@ export const YourComponent: React.FC = () => {
 
 ## PropTypes
 
-| Key          | Type         | Description                                                 |
-| ------------ | ------------ | ----------------------------------------------------------- |
-| type         | `number`     | Allows only numbers, only letters, only letters and numbers |
-| inputsNumber | `number`     | The count of characters                                     |
-| status       | `StatusType` | `process`, `wait`, `error`, `success`                       |
-| title        | `string`     | Title                                                       |
-| subTitle     | `string`     | Sub Title                                                   |
-| onChange     | `Function`   | Trigger on input change                                     |
-| onFinish     | `Function`   | Trigger on all character inputs                             |
+| Key          | Type         | Description                           |
+| ------------ | ------------ | ------------------------------------- |
+| type         | `number`     | `number`, `text`, `numberAndText`     |
+| inputsNumber | `number`     | The count of characters               |
+| status       | `StatusType` | `process`, `wait`, `error`, `success` |
+| title        | `string`     | Title                                 |
+| subTitle     | `string`     | Sub Title                             |
+| onChange     | `Function`   | Trigger on input change               |
+| onFinish     | `Function`   | Trigger on all character inputs       |
