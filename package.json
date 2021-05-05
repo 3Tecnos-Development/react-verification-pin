@@ -20,6 +20,15 @@
   "bugs": {
     "url": "https://github.com/3Tecnos-Development/react-verification-pin/issues"
   },
+  "keywords": [
+    "react",
+    "react-component",
+    "credit card",
+    "input",
+    "verifycode",
+    "PIN",
+    "pin-code"
+  ],
   "homepage": "https://github.com/3Tecnos-Development/react-verification-pin#readme",
   "devDependencies": {
     "@types/faker": "^5.1.5",
