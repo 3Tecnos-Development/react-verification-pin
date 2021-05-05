@@ -27,7 +27,10 @@
     "input",
     "verifycode",
     "PIN",
-    "pin-code"
+    "pin-code",
+    "SMS",
+    "SMS pin code",
+    "E-mail pin code"
   ],
   "homepage": "https://github.com/3Tecnos-Development/react-verification-pin#readme",
   "devDependencies": {
