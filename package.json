@@ -1,6 +1,6 @@
 {
   "name": "react-verification-pin",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A library React JS to verify the PIN code",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
