@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/indent */
+/* eslint-disable indent */
 /* eslint-disable no-nested-ternary */
 import styled, { keyframes } from "styled-components";
 import { IVerificationCode } from "../../../types";
@@ -27,6 +29,7 @@ export const Wrapped = styled.div<IVerificationCode>`
     margin-top: 20px;
     animation-duration: 1s;
     animation-fill-mode: both;
-    animation-name: ${({ status }) => (status === "error" ? pulse : "")};
+    animation-name: ${({ status }) =>
+      ["error", "success"].includes(status) ? pulse : ""};
   }
 `;

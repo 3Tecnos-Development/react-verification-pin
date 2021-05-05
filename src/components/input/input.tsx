@@ -2,11 +2,13 @@
 /* eslint-disable @typescript-eslint/indent */
 import React, { forwardRef, useState } from "react";
 import { IVerificationCode } from "src/types";
+import { v4 as uuidv4 } from "uuid";
 // import { isMobile } from "react-device-detect";
 import * as S from "./styles/styled-input";
 
 type internalInputType = "text" | "number";
 
+const uuid = uuidv4();
 export interface IInputProps {
   id: string;
   type?: internalInputType;
@@ -54,7 +56,7 @@ export const Input = forwardRef<
         ref={ref}
         value={value}
         status={status}
-        autoComplete="off"
+        autoComplete={`autocomplete_off_${uuid}`} // Disable autocomplete hack
         type={type}
         name={id}
         id={id}

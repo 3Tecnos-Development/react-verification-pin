@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import * as S from "./styles";
 import { Input, ShakeX, VerifyIcon } from "./components";
-import { useTheme } from "./theme";
+import { ThemeType, useTheme } from "./theme";
 import { IVerificationCode, StatusType } from "./types";
 
 export { StatusType };
@@ -24,6 +24,7 @@ const pattern = {
 };
 
 interface IVerificationCodeProps extends IVerificationCode {
+  theme?: ThemeType;
   type: inputType;
   inputsNumber: number;
   title?: string;
@@ -33,6 +34,7 @@ interface IVerificationCodeProps extends IVerificationCode {
 }
 
 export const VerificationCode: React.FC<IVerificationCodeProps> = ({
+  theme = "easyPeasy",
   type,
   inputsNumber,
   title,
@@ -42,7 +44,7 @@ export const VerificationCode: React.FC<IVerificationCodeProps> = ({
   onFinish,
 }) => {
   const inputsRef = useRef<HTMLInputElement[]>([]);
-  const { theme } = useTheme();
+  const { themeSchema } = useTheme(theme);
   const [internalStatus, setInternalStatus] = useState<StatusType>("process");
 
   useEffect(() => {
@@ -108,7 +110,7 @@ export const VerificationCode: React.FC<IVerificationCodeProps> = ({
   };
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={themeSchema}>
       <S.Container>
         <VerifyIcon status={internalStatus} />
         {title && <S.Title>{title}</S.Title>}

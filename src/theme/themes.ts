@@ -8,6 +8,7 @@ interface IPalette {
 export interface IThemeSchema extends DefaultTheme {
   colors: {
     process: IPalette;
+    wait: IPalette;
     success: IPalette;
     error: IPalette;
   };
@@ -41,12 +42,18 @@ const errorPalette: IPalette = {
   secondary: "#ffedf1 !important",
 };
 
+export type ThemeType = "easyPeasy";
+
 export const themes: ITheme = {
   easyPeasy: {
     colors: {
       process: {
         primary: "#7327d5 !important",
         secondary: "#e8dcf7 !important",
+      },
+      wait: {
+        primary: "#7327d5",
+        secondary: "#e8dcf7",
       },
       success: successPalette,
       error: errorPalette,

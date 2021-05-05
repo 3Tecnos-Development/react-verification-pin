@@ -6,9 +6,12 @@ import * as S from "./styles";
 
 export const VerifyIcon: React.FC<IVerificationCode> = ({ status }) => {
   return (
-    <S.Wrapped status={status}>
-      <S.SonarWave status={status} />
-      {status === "success" ? <BiLockOpen /> : <BiLock />}
-    </S.Wrapped>
+    <>
+      <S.Spinner status={status} />
+      <S.Wrapped status={status}>
+        <S.SonarWave status={status} />
+        {status === "success" ? <BiLockOpen /> : <BiLock />}
+      </S.Wrapped>
+    </>
   );
 };

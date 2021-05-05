@@ -33,7 +33,7 @@ export const StyledInput = styled.input<IVerificationCode>`
   transition: all 0.3s ease;
   margin-bottom: 14px;
   border-radius: 8px;
-  width: 60px;
+  width: 55px;
   height: 65px;
   margin-left: 8px;
   margin-right: 8px;

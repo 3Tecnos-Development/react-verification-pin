@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
-import { IThemeSchema, themes } from "./themes";
+import { IThemeSchema, themes, ThemeType } from "./themes";
 
 interface IUseTheme {
-  theme: IThemeSchema;
+  themeSchema: IThemeSchema;
   themeLoaded: boolean;
 }
 
-export const useTheme = (): IUseTheme => {
-  const [theme] = useState<IThemeSchema>(themes.easyPeasy);
+export const useTheme = (themeType: ThemeType): IUseTheme => {
+  const [themeSchema] = useState<IThemeSchema>(themes[themeType]);
   const [themeLoaded, setThemeLoaded] = useState(false);
 
   useEffect(() => {
     setThemeLoaded(true);
   }, []);
 
-  return { theme, themeLoaded };
+  return { themeSchema, themeLoaded };
 };
