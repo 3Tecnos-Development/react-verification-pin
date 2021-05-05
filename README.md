@@ -1,5 +1,6 @@
+![react-verification-code](https://user-images.githubusercontent.com/51383115/117189810-fe791a00-adb4-11eb-9709-6e6610a3544b.gif)
+
 <h3 align="center">react-verification-code</h3>
-<p align="center">This library aims to facilitate access to a non-relational database.</p>
 
 ## Installation
 
