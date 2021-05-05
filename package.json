@@ -55,12 +55,12 @@
     "ts-node": "^8.10.2",
     "ttypescript": "^1.5.12",
     "typescript": "^3.9.7",
-    "typescript-transform-paths": "^2.2.3"
-  },
-  "dependencies": {
+    "typescript-transform-paths": "^2.2.3",
     "react": "^17.0.2",
     "react-icons": "^4.2.0",
-    "styled-components": "^5.2.3",
+    "styled-components": "^5.2.3"
+  },
+  "dependencies": {
     "uuid": "^8.3.2"
   }
 }
