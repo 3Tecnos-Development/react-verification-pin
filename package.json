@@ -1,7 +1,7 @@
 {
   "name": "react-verification-pin",
   "version": "0.1.0",
-  "description": "",
+  "description": "A library to verify the PIN code",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -15,7 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/3Tecnos-Development/react-verification-pin.git"
   },
-  "author": "Lindsay Cerqueira<lindsay@3tecnos.com.br>",
+  "author": "Lindsay Cerqueira <lindsay@3tecnos.com.br>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/3Tecnos-Development/react-verification-pin/issues"
