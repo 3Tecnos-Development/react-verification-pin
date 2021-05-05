@@ -2,7 +2,7 @@
 /* eslint-disable indent */
 /* eslint-disable no-nested-ternary */
 import styled, { keyframes } from "styled-components";
-import { IVerificationCode } from "../../../types";
+import { IVerificationPin } from "../../../types";
 
 const pulse = keyframes`
     0%{transform:scaleX(1)}
@@ -10,7 +10,7 @@ const pulse = keyframes`
     to{transform:scaleX(1)}
 `;
 
-export const Wrapped = styled.div<IVerificationCode>`
+export const Wrapped = styled.div<IVerificationPin>`
   background-color: ${({ theme, status }) => theme.colors[status].secondary};
   position: relative;
   top: 50%;

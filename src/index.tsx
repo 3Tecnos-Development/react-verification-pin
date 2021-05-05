@@ -5,7 +5,7 @@ import { ThemeProvider } from "styled-components";
 import * as S from "./styles";
 import { Input, ShakeX, VerifyIcon } from "./components";
 import { ThemeType, useTheme } from "./theme";
-import { IVerificationCode, StatusType } from "./types";
+import { IVerificationPin, StatusType } from "./types";
 
 export { StatusType };
 
@@ -23,7 +23,7 @@ const pattern = {
   numberAndText: /^[A-Za-z0-9]+$/,
 };
 
-interface IVerificationCodeProps extends IVerificationCode {
+interface IVerificationPinProps extends IVerificationPin {
   theme?: ThemeType;
   type: inputType;
   inputsNumber: number;
@@ -34,7 +34,7 @@ interface IVerificationCodeProps extends IVerificationCode {
   onFinish?: (completeCode: string) => void;
 }
 
-export const VerificationCode: React.FC<IVerificationCodeProps> = ({
+export const VerificationPin: React.FC<IVerificationPinProps> = ({
   theme = "easyPeasy",
   type,
   inputsNumber,

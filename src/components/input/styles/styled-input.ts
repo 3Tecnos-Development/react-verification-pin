@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { IVerificationCode } from "../../../types";
+import { IVerificationPin } from "../../../types";
 
 export const inputError = css`
   border-color: ${({ theme }) => theme.colors.error.primary};
@@ -19,7 +19,7 @@ export const inputFocus = css`
   border-color: ${({ theme }) => theme.input.focus.borderColor};
 `;
 
-export const StyledInput = styled.input<IVerificationCode>`
+export const StyledInput = styled.input<IVerificationPin>`
   background-color: ${({ theme }) => theme.input.backgroundColor};
   color: ${({ theme }) => theme.colors.process.primary};
   -webkit-appearance: none; /* box-shadow Iphone */

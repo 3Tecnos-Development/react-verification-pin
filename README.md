@@ -4,11 +4,11 @@
   </a>
 </p>
 
-<h3 align="center">react-verification-code</h3>
+<h3 align="center">react-verification-pin</h3>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/react-verification-code">
-    <img src="https://img.shields.io/npm/v/react-verification-code.svg" alt="NPM">
+  <a href="https://www.npmjs.com/package/react-verification-pin">
+    <img src="https://img.shields.io/npm/v/react-verification-pin.svg" alt="NPM">
   </a>
   <a href="LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="MIT">
@@ -20,7 +20,7 @@
 Install via NPM:
 
 ```bash
-npm install react-verification-code
+npm install react-verification-pin
 
 ```
 
@@ -29,7 +29,7 @@ npm install react-verification-code
 #### TypeScript
 
 ```typescript
-import { VerificationCode, StatusType } from "react-verification-code";
+import { VerificationPin, StatusType } from "react-verification-pin";
 
 export const YourComponent: React.FC = () => {
   const [status, setStatus] = useState<StatusType>("process");
@@ -50,7 +50,7 @@ export const YourComponent: React.FC = () => {
   };
 
   return (
-    <VerificationCode
+    <VerificationPin
       type="number"
       inputsNumber={6}
       status={status}

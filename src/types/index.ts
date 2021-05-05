@@ -1,1 +1,1 @@
-export * from "./i-verification-code";
+export * from "./i-verification-pin";

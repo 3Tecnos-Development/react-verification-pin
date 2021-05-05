@@ -1,5 +1,5 @@
 {
-  "name": "@3Tecnos-Development/react-verification-code",
+  "name": "react-verification-pin",
   "version": "0.1.0",
   "description": "",
   "main": "lib/index.js",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/3Tecnos-Development/react-verification-code.git"
+    "url": "git+https://github.com/3Tecnos-Development/react-verification-pin.git"
   },
   "author": "Lindsay Cerqueira<lindsay@3tecnos.com.br>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/3Tecnos-Development/react-verification-code/issues"
+    "url": "https://github.com/3Tecnos-Development/react-verification-pin/issues"
   },
-  "homepage": "https://github.com/3Tecnos-Development/react-verification-code#readme",
+  "homepage": "https://github.com/3Tecnos-Development/react-verification-pin#readme",
   "devDependencies": {
     "@types/faker": "^5.1.5",
     "@types/jest": "^26.0.5",

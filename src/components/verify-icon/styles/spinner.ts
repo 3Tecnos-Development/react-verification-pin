@@ -1,12 +1,12 @@
 import styled, { keyframes } from "styled-components";
-import { IVerificationCode } from "../../../types";
+import { IVerificationPin } from "../../../types";
 
 const animation = keyframes`
     0% {transform: rotate(0deg);}
   100% {transform: rotate(360deg);}
 `;
 
-export const Spinner = styled.div<IVerificationCode>`
+export const Spinner = styled.div<IVerificationPin>`
   position: absolute;
   display: ${({ status }) => (status === "wait" ? "inline-block" : "none")};
   width: 80px;
