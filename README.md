@@ -1,4 +1,8 @@
-![react-verification-code](https://user-images.githubusercontent.com/51383115/117190814-40ef2680-adb6-11eb-9b38-3a67337cf734.gif)
+<p align="center">
+  <a href="#">
+    <img src="https://user-images.githubusercontent.com/51383115/117195642-e5c03280-adbb-11eb-97c8-67b30c5cf436.gif">
+  </a>
+</p>
 
 <h3 align="center">react-verification-code</h3>
 
